@@ -3,7 +3,7 @@ import { ProviderNotes } from "./index"
 const Modal = () => {
     const {modal, handleModal, handleForm, addNotes} = useContext(ProviderNotes)
     return (
-        <div className={`${modal ? "flex" : "hidden"} p-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 bg-white -translate-y-1/2 gap-4 flex-col border w-96 z-40`}>
+        <div className={`${modal ? "scale-1 z-40" : "scale-0 z-0"} transition ease-in duration-200 p-4 flex absolute top-1/2 left-1/2 transform -translate-x-1/2 bg-white -translate-y-1/2 gap-4 flex-col border w-96 z-40`}>
             <input type="text"  placeholder="title" className="w-full p-4 rounded bg-gray-200" onChange={(e) => handleForm({
                 value:e.target.value,
                 type:"title"

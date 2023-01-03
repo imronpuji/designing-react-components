@@ -44,7 +44,16 @@ const Home = () => {
       { locale:"gm" }
     )
       }} className={`mr-4 border rounded border-blue-700 py-1 text-blue-700 px-4 hover:bg-blue-100 ${router.locale === "gm" && "bg-blue-700 hover:text-blue-800 text-white"}`}>Germany</button>
+      <button
+  type="button"
+  onClick={() => {
+    throw new Error("Sentry Frontend Error");
+  }}
+>
+  Throw error
+</button>
     </div>
+
   )
 }
 
